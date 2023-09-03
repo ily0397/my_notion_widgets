@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<!-- Auther: Shorouk Abdelaziz  https://shorouk.dev -->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Socials</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+    }
+
+    .wrapper {
+      padding-top: 10px;
+      display: inline-flex;
+
+    }
+
+    .fill {
+      width: 50px;
+      height: 50px;
+      padding: 2%;
+      color: #fff;
+      outline: 0;
+      border: 2px solid black;
+      cursor: pointer;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0);
+      margin: 5px;
+    }
+
+    .fill::after {
+      content: "";
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      top: 5px;
+      left: 5px;
+      transition: 0.2s;
+    }
+
+    .fill:hover::after {
+      top: 0px;
+      left: 0px;
+    }
+
+
+    .icon {
+      font-size: 1em;
+    }
+
+    .email:hover,
+    .email::after {
+      background-color: #ffbd2f;
+    }
+
+    .google-drive:hover,
+    .google-drive::after {
+      background-color: #32a852;
+    }
+
+    .google-calendar:hover,
+    .google-calendar::after {
+      background-color: #32a883;
+    }
+
+    .youtube:hover,
+    .youtube::after {
+      background: #FF0000;
+    }
+
+    .linkedin:hover,
+    .linkedin::after {
+      background-color: #0e76a8;
+    }
+
+    .ilovepdf:hover,
+    .ilovepdf::after {
+      background-color: #ab2e58;
+    }
+
+    .chatgpt:hover,
+    .chatgpt::after {
+      background-color: #1b854a;
+    }
+
+    .shopee:hover,
+    .shopee::after {
+      background-color: #ff4800;
+    }
+
+    .shopback:hover,
+    .shopback::after {
+      background-color: #ff9100;
+    }
+
+    .canva:hover,
+    .canva::after {
+      background-color: #6223c8;
+    }
+
+    .github:hover,
+    .github::after {
+      background-color: #071a44;
+    }
+
+    .coursera:hover,
+    .coursera::after {
+      background-color: #2b457e;
+    }
+
+    .datacamp:hover,
+    .datacamp::after {
+      background-color: #14a720;
+    }
+
+    .social {
+      position: relative;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .social:hover {
+      color: #fff;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <body>
+
+    <div class="wrapper">
+
+
+      <!-- Start email Icon -->
+      <div id="email" onclick="navigate(this.id)" class="fill email">
+        <span class="icon email"><i class="fa-solid fa-envelope"></i></span>
+      </div>
+      <!-- End email Icon -->
+
+
+      <!-- Start google-drive Icon -->
+      <div id="google-drive" onclick="navigate(this.id)" class="fill google-drive">
+        <span class="icon google-drive"><i class="fa-solid fa-google-drive"></i></span>
+      </div>
+      <!-- End google-drive Icon -->
+
+
+      <!-- Start google-calendar Icon -->
+      <div id="google-calendar" class="fill calendar">
+        <span class="icon google-calendar"><i class="fa-regular fa-calendar"></i></span>
+      </div>      
+      <!-- End google-calendar Icon -->
+
+
+      <!-- Start youtube Icon -->
+      <div id="youtube" class="fill youtube">
+        <span class="icon youtube"><i class="fa-brands fa-youtube"></i></span>
+      </div>      
+      <!-- End youtube Icon -->
+
+
+      <!-- Start linkedin Icon -->
+      <div id="linkedin" onclick="navigate(this.id)" class="fill linkedin">
+        <span class="icon"><i class="fab fa-linkedin"></i></span>
+      </div>
+      <!-- End linkedin Icon -->
+
+
+      <!-- Start ilovepdf Icon -->
+      <div id="ilovepdf" class="fill heart">
+        <span class="icon ilovepdf"><i class="fa-solid fa-heart"></i></span>
+      </div>     
+      <!-- End ilovepdf Icon -->
+    </div>
+
+
+      <!-- Start chatgpt Icon -->
+      <div id="chatgpt" class="fill dot">
+        <span class="icon chatgpt"><i class="fa-solid fa-brain"></i></span>
+      </div>      
+      <!-- End chatgpt Icon -->
+    </div>
+
+
+      <!-- Start shopee Icon -->
+      <div id="shopee" class="fill dot">
+        <span class="icon shopee"><i class="fa-solid fa-bag-shopping"></i></span>
+      </div>      
+      <!-- End shopee Icon -->
+    </div>
+
+
+      <!-- Start shopback Icon -->
+      <div id="shopback" class="fill dot">
+        <span class="icon shopback"><i class="fa-solid fa-money-bill"></i></span>
+      </div>      
+      <!-- End shopback Icon -->
+    </div>
+
+    
+      <!-- Start canva Icon -->
+      <div id="canva" class="fill dot">
+        <span class="icon canva"><i class="fa-solid fa-brush"></i></span>
+      </div>      
+      <!-- End canva Icon -->
+    </div>
+
+
+      <!-- Start github Icon -->
+      <div id="github" class="fill dot">
+        <span class="icon github"><i class="fa-brands fa-github"></i></span>
+      </div>      
+      <!-- End github Icon -->
+    </div>
+
+
+
+      <!-- Start coursera Icon -->
+      <div id="coursera" class="fill dot">
+        <span class="icon coursera"><i class="fa-solid fa-school"></i></span>
+      </div>      
+      <!-- End coursera Icon -->
+    </div>
+
+
+      <!-- Start datacamp Icon -->
+      <div id="datacamp" class="fill dot">
+        <span class="icon datacamp"><i class="fa-solid fa-database"></i></span>
+      </div>      
+      <!-- End datacamp Icon -->
+    </div>
+
+
+    </div>
+
+
+
+
+    <script>
+      function navigate(id) {
+
+        //if you want the URL to open in the same window use '_parent'  instead of '_blank'
+
+        if (id === "email")
+          window.open("mailto:ilyeas0397@gmail.com", '_blank').focus(); // EMAIL
+
+        else if (id === "google-drive") {
+          window.open("https://drive.google.com/drive/my-drive", '_blank').focus(); // GOOGLE DRIVE
+        }
+        else if (id === "google-calendar") {
+          window.open("https://calendar.google.com/calendar/u/0/r?pli=1", '_blank').focus(); // GOOGLE CALENDAR
+        }
+        else if (id === "youtube") {
+          window.open("https://www.youtube.com/", '_blank').focus(); // YOUTUBE
+        }
+        else if (id === "linkedin") {
+          window.open("https://www.linkedin.com/", '_blank').focus(); // LINKEDIN
+        }
+        else if (id === "ilovepdf") {
+          window.open("https://www.ilovepdf.com/word_to_pdf", '_blank').focus(); // ILOVEPDF
+        }
+        else if (id === "chatgpt") {
+          window.open("https://chat.openai.com/", '_blank').focus(); // CHATGPT
+        }
+        else if (id === "shopee") {
+          window.open("https://shopee.com.my/", '_blank').focus(); // SHOPEE
+        }
+        else if (id === "shopback") {
+          window.open("https://www.shopback.my/", '_blank').focus(); // SHOPBACK
+        }
+        else if (id === "github") {
+          window.open("https://github.com/ily0397", '_blank').focus(); // GITHUB
+        }
+        else if (id === "coursera") {
+          window.open("https://www.coursera.org/", '_blank').focus(); // COURSERA
+        }
+        else if (id === "datacamp") {
+          window.open("https://app.datacamp.com/learn/courses", '_blank').focus(); // DATACAMP
+        }
+      }
+
+    </script>
+
+
+
+  </body>
+
+</html>
